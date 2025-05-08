@@ -4,6 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .tooltip {
+          position: relative;
+          cursor: pointer;
+          border-bottom: 1px dotted #000;
+        }
+      
+        .tooltip:hover::after {
+          content: attr(data-tooltip);
+          position: absolute;
+          background: #333;
+          color: #fff;
+          padding: 5px 10px;
+          border-radius: 5px;
+          top: 25px;
+          left: 0;
+          white-space: nowrap;
+          z-index: 10;
+        }
+      
+        .emphasize {
+          font-weight: bold;
+          color: darkblue;
+        }
+      
+        .underline {
+          text-decoration: underline;
+        }
+      </style>
 </head>
 <body>
     <h1>
