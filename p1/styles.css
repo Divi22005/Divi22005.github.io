@@ -10,7 +10,7 @@
 header {
     display: flex;
     justify-content: space-between;
-    background-color: orange;
+    background-color: orangered;
     color: white;
     padding: 10px;
 }
@@ -38,7 +38,7 @@ header a{
 }
 
 .btn-signup{
-    background-color: orange;
+    background-color: yellow;
     margin-top: 10px;
     padding:7px;
     font-size: 20px;
@@ -52,7 +52,7 @@ header a{
 }
 
 .image {
-    border-radius: 50px;
+    border-radius: 10px;
 }
 
 .title {
