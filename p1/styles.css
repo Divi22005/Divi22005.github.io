@@ -98,11 +98,12 @@ button
 .boxfirst 
 {
     width: 32%;
-    background-color: #ffffff;
+    background-color: #fdf9f9;
     padding: 30px;
     margin: 20px 0;
     border-radius: 12px;
     box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
 }
 .boxfirst:hover
 {
@@ -117,5 +118,115 @@ button
 }
 #sect 
 {
-    background-color: #c4b1c7;
+    background-color: #cba9d0;
+}
+
+.box:hover
+
+#services {
+  background-color: #3385a3;
+  padding: 40px 20px;
+}
+
+.services-heading {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: #2b2b2b;
+}
+
+.services-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.services-image img {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.services-list ul {
+  list-style: disc inside;
+  font-size: 18px;
+  color: #333;
+  line-height: 2;
+}
+
+#about {
+  background-color: #8f8fa9;
+  padding: 40px 20px;
+}
+
+.about-heading {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.skills-container h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.skills-container ul {
+  list-style: square inside;
+  font-size: 18px;
+  color: #333;
+  line-height: 2;
+}
+
+
+
+#contact {
+  background-color: #2c2c2c;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.contact-heading {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.contact-container {
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  font-size: 18px;
+}
+
+.contact-item a {
+  color: #64b5f6; 
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #2c2c2c;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
 }
