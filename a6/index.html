@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-   Email   <input type="text" id="user" placeholder="Username"><br>
-    Password <input type="password" id="pass" placeholder="Password"><br>
-    <button onclick="handleSubmit()">Submit</button>
-    <script src="script.js"></script>
+    <h1></h1>
+    Enter email:<input type="text" placeholder="Enter Email" id="email">
+    <br><br>
+    Enter Password:<input type="password" placeholder="Enter Password" id="pass">
+    <br><br>
+    <button onClick="validate()">Submit</button>
+    <hr>
+    <div id="result"></div>
+    <script>
+        function validate(){
+            let name=document.getElementById("email").value
+            let password=document.getElementById("pass").value
+            document.getElementById("result").innerHTML=name+"<br>"+password;
+        }
+    </script>
 </body>
 </html>
