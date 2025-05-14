@@ -5,8 +5,8 @@ function calculateAll(){
     var subtraction=a-b;
     var multiplication=a*b;
     var division=a/b;
-    //var div=a/b;
+
    document.getElementById("result").innerHTML=
-   "sum"+ sum +"<br>"+"Dif"+dif+"<br>"+"mul"+mul;
+   "Addition"+ Addition +"<br>"+"subtraction"+subtraction+"<br>"+"multiplication"+multiplication+"<br>"+"division"+division;
 
 }
