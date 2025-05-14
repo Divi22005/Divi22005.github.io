@@ -7,6 +7,6 @@ function calculateAll(){
     var division=a/b;
 
    document.getElementById("result").innerHTML=
-   "Addition"+ Addition +"<br>"+"subtraction"+subtraction+"<br>"+"multiplication"+multiplication+"<br>"+"division"+division;
+   "Addition: "+ Addition +"<br>"+"subtraction: "+subtraction+"<br>"+"multiplication: "+multiplication+"<br>"+"division: "+division;
 
 }
