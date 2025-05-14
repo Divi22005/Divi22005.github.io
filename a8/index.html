@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        #result {
+            margin-left: 200px;
+            color: brown;
+        }
+        .sty button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <label>Enter First Number:</label>
+    <input type="text" placeholder="Enter number" id="num1">
+    <br><br>
+
+    <label>Enter Second Number:</label>
+    <input type="text" placeholder="Enter number" id="num2">
+    <br><br>
+
+    <div class="sty">
+        <button onclick="addition()">+</button>
+        <button onclick="subtraction()">-</button>
+        <button onclick="multiplication()">*</button>
+        <button onclick="division()">/</button>
+    </div>
+
+    <div id="addition"></div>
+    <div id="subtraction"></div>
+    <div id="multiplication"></div>
+    <div id="division"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
