@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+  </head>
+  <body>
+    <h1>Handling Array of Objects</h1>
+    <div id="product-container"></div>
+    <script>
+      const products = [
+        { id: 1, name: "Apple", price: 250, imgUrl: "https://tse3.mm.bing.net/th?id=OIP.XprgHSCfPgHBpfQBBfAWqwHaFb&pid=Api&P=0&h=180" },
+        { id: 2, name: "Orange", price: 100, imgUrl: "https://up.yimg.com/ib/th?id=OIP.jltuFngRsBzn-FC_lV_31gHaGS&pid=Api&rs=1&c=1&qlt=95&w=124&h=105" },
+        { id: 3, name: "Mango", price: 80, imgUrl: "https://sp.yimg.com/ib/th?id=OIP.PsL4c_nYmJkdXhVQQtQjvQHaHa&pid=Api&w=148&h=148&c=7&dpr=2&rs=1" },
+      ];
+      const container = document.getElementById("product-container");
+
+      products.forEach(product => {
+        const div = document.createElement("div");
+        div.className = "product";
+        div.innerHTML = `
+          <img src="${product.imgUrl}" alt="${product.name}" />
+          <h2>${product.name}</h2>
+          <p>Price: ₹${product.price}</p>`;
+        container.appendChild(div);
+      });
+    </script>
+
+  </body>
+</html>
