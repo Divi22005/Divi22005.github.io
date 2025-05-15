@@ -1,83 +1,91 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      .row {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <style>
+    .row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-      .row div {
-        background-color: orange;
-        margin: 10px;
-        padding: 10px;
-        width: 200px;
-      }
-    </style>
-  </head>
-  <body onload="dispProducts()">
-    <p>
-      <input type="number" id="txtId" />
-      <input type="text" id="txtName" />
-      <input type="number" id="txtPrice" />
-      <input type="text" id="txtUrl" />
-      <button onclick="addProduct()">Add</button>
-    </p>
-    <div id="container" class="row"></div>
-    <script>
-      const products = [
-        {
-          id: 1,
-          name: "Apple",
-          price: 250,
-          imgUrl: "https://up.yimg.com/ib/th?id=OIP.3-zrV5_l8F7c65Xr1DflrgHaHa&pid=Api&rs=1&c=1&qlt=95&w=116&h=116",
-        },
-        {
-          id: 2,
-          name: "Orange",
-          price: 100,
-          imgUrl: "https://up.yimg.com/ib/th?id=OIP.cbQa8MAXT5rHE2nx3Ul6RAHaE8&pid=Api&rs=1&c=1&qlt=95&w=177&h=118",
-        },
-        {
-          id: 3,
-          name: "Mango",
-          price: 80,
-          imgUrl: "https://up.yimg.com/ib/th?id=OIP.zzB-RUq1RlCFutGUbXjOJQHaFF&pid=Api&rs=1&c=1&qlt=95&w=179&h=122",
-        },
-      ];
+    .row div {
+      background-color: burlywood;
+      margin: 10px;
+      padding: 10px;
+      width: 200px;
+      text-align: center;
+      border-radius: 10px;
+    }
 
-      function addProduct() {
-        let id = document.querySelector("#txtId").value;
-        let name = document.querySelector("#txtName").value;
-        let price = document.querySelector("#txtPrice").value;
-        let imgUrl = document.querySelector("#txtUrl").value;
-        const obj = {
-          id: id,
-          name: name,
-          price: price,
-          imgUrl: imgUrl,
-        };
-        products.push(obj)
-        dispProducts()
-      }
+    .row img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
 
-      function dispProducts() {
-        let str = "";
-        products.map((value) => {
-          str += `<div>
-                <img src=${value.imgUrl}/>
-                <h2>${value.name}</h2>
-                <h3>${value.price}</h3>
-                <button>Add to Cart</button>
+    button {
+      margin: 5px;
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+<body onload="dispproducts()">
+  <h1 style="text-align: center;">Assignment-10</h1>
+  <p style="text-align: center;">
+    <input type="number" id="textid" placeholder="id" />
+    <input type="text" id="textname" placeholder="name" />
+    <input type="number" id="textprice" placeholder="price" />
+    <input type="text" id="texturl" placeholder="url" />
+    <button onclick="addproduct()">Add</button>
+  </p>
+  <div id="container" class="row"></div>
+
+  <script>
+    let products = [
+      { id: 1, name: "Apple", price: 250, imgUrl: "https://up.yimg.com/ib/th?id=OIP.3-zrV5_l8F7c65Xr1DflrgHaHa&pid=Api&rs=1&c=1&qlt=95&w=116&h=116" },
+      { id: 2, name: "Orange", price: 100, imgUrl: "https://up.yimg.com/ib/th?id=OIP.258deuTWS5z7BPtHf_WAyQHaGm&pid=Api&rs=1&c=1&qlt=95&w=135&h=120" },
+      { id: 3, name: "Mango", price: 80, imgUrl: "https://sp.yimg.com/ib/th?id=OIP.PsL4c_nYmJkdXhVQQtQjvQHaHa&pid=Api&w=148&h=148&c=7&dpr=2&rs=1" },
+    ];
+
+    function addproduct() {
+      let id = document.querySelector("#textid").value;
+      let name = document.querySelector("#textname").value;
+      let price = document.querySelector("#textprice").value;
+      let imgUrl = document.querySelector("#texturl").value;
+
+      const obj = {
+        id: parseInt(id),
+        name,
+        price: parseFloat(price),
+        imgUrl,
+      };
+
+      products.push(obj);
+      dispproducts();
+    }
+
+    function deleteProduct(id) {
+      products = products.filter(product => product.id !== id);
+      dispproducts();
+    }
+
+    function dispproducts() {
+      let str = "";
+      products.forEach((value) => {
+        str += `<div>
+                  <img src="${value.imgUrl}" alt="${value.name}" />
+                  <h2>${value.name}</h2>
+                  <h3>&#8377;${value.price}</h3>
+                  <button>Add to Cart</button>
+                  <button onclick="deleteProduct(${value.id})">Delete</button>
                 </div>`;
-        });
-        container.innerHTML = str;
-      }
-    </script>
-  </body>
+      });
+      document.getElementById("container").innerHTML = str;
+    }
+  </script>
+</body>
 </html>
