@@ -3,6 +3,6 @@ const products = [
   {id: 2, name: 'Product 2', price: 20},
   {id: 3, name: 'Product 3', price: 30},
 ];
-products.map(product => 
-  console.log(`${product.name}: $${product.price + 5}`)
-);    
+
+const updatedProducts = products.map(p => `${p.name}: $${p.price + 5}`);
+console.log(updatedProducts);
