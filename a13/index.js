@@ -1,8 +1,15 @@
-const products = [
-  {id: 1, name: 'Product 1', price: 10},
-  {id: 2, name: 'Product 2', price: 20},
-  {id: 3, name: 'Product 3', price: 30},
+
+const items = [
+  { name: "apple", price: 50, qty: 3, status: "pending" },
+  { name: "banana", price: 30, qty: 5, status: "pending" },
+  { name: "orange", price: 80, qty: 2, status: "pending" },
 ];
 
-const updatedProducts = products.map(p => `${p.name}: $${p.price + 5}`);
-console.log(updatedProducts);
+const updateItems = items.filter(item =>item.qty >2).map((item) => ({
+  ...item,
+  price: item.price + 5,
+  total: (item.price + 5) * item.qty,
+  status: "complete"
+}));
+
+console.log(updateItems);
