@@ -1,7 +1,12 @@
-
-add(1,2,3,4,5,6,7);
-
-function add(...values){
-    const addValues=values.reduce((sum,value) => sum + value , 0);
-    console.log(addValues);
+function greet() {
+  console.log("Hello World");
 }
+
+async function dispData() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const data = await res.json();
+  console.log(data);
+  greet(); // Now runs after data is logged
+}
+
+dispData();

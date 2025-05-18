@@ -1,25 +1,19 @@
+const products = [
+  { id: 1, name: "Apple", price: 50 },
+  { id: 2, name: "Mango", price: 60 },
+  { id: 3, name: "Banana", price: 80 }
+];
 
-function add(x,y) {
-    return new Promise((resolve,reject) => {
-        if(x<5){
-            reject("x cannot be less than 5");
-        }else{
-            resolve(x+y);
-        }
-    });
-}
+const cart = { 1: 7, 2: 9 };
 
-function sqr(a){
-    return a*a;
-}
+const totalOrder = products.reduce((sum, product) => {
+  if (cart[product.id]) {
+    const qty = cart[product.id];
+    const total = product.price * qty;
+    console.log(product.name, product.price, qty, total);
+    return sum + total;
+  }
+  return sum;
+}, 0);
 
-async function main(){
-   try{
-        let result = await add(6,5);
-        let res = await sqr(result);
-        console.log(res);
-   } catch(err){
-    console.log(err);
-   }
-};
-main()
+console.log("Total Order Value:", totalOrder);
