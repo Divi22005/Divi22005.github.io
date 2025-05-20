@@ -74,8 +74,8 @@ const dispCart = () => {
       <h4>${product.name}</h4>
       <span>Qty: ${quantity} | ₹${itemTotal}</span>
       <div class="quantity-control">
+        <button onclick="removeFromCart(${id})">-</button>  
         <button onclick="addToCart(${id}, true)">+</button>
-        <button onclick="removeFromCart(${id})">-</button>
       </div>
     `;
     container.appendChild(item);
