@@ -43,6 +43,30 @@
       const amount = parseFloat(document.getElementById("amount").value);
       const msg = document.getElementById("msg");
 
+      if (action === "transfer") {
+  const recipientCard = document.getElementById("recipient").value;
+  const recipient = customers.find(c => c.cart === recipientCard);
+
+  if (!recipient) {
+    msg.textContent = "Recipient not found!";
+    return;
+  }
+
+  if (recipient.cart === currentCustomer.cart) {
+    msg.textContent = "Cannot transfer to your own account!";
+    return;
+  }
+
+  if (amount > currentCustomer.balance) {
+    msg.textContent = "Insufficient balance for transfer!";
+    return;
+  }
+
+  currentCustomer.balance -= amount;
+  recipient.balance += amount;
+  msg.textContent = `Transfer successful! $${amount} sent to ${recipient.name}`;
+}
+
       if (isNaN(amount) || amount <= 0) {
         msg.textContent = "Please enter a valid amount!";
         return;
