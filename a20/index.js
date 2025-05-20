@@ -1,6 +1,6 @@
  const customers = [
-      { cart: "1234567890", pin: "1234", name: "John", balance: 1000 },
-      { cart: "1234567891", pin: "2345", name: "Cathy", balance: 1500 },
+      { card: "1234567890", pin: "1234", name: "John", balance: 1000 },
+      { card: "1234567891", pin: "2345", name: "Cathy", balance: 1500 },
     ];
 
     let currentCustomer = null;
