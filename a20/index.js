@@ -19,10 +19,14 @@
           <h2>Welcome, ${customer.name}!</h2>
           <div id="action-box">
             <p>Balance: $<span id="balance">${customer.balance}</span></p>
-            <select id="action">
+            <select id="action" onchange="toggleRecipientField()">
               <option value="deposit">Deposit</option>
               <option value="withdraw">Withdraw</option>
+              <option value="transfer">Fund Transfer</option>
             </select>
+            <div id="recipient-box" style="display: none;">
+          <input type="text" id="recipient" placeholder="Recipient Card Number" />
+        </div>
             <input type="number" id="amount" placeholder="Enter amount" />
             <button onclick="handleTransaction()">Submit</button>
             <button onclick="logout()">Logout</button>
@@ -70,3 +74,9 @@
       `;
       currentCustomer = null;
     };
+
+    const toggleRecipientField = () => {
+  const action = document.getElementById("action").value;
+  const recipientBox = document.getElementById("recipient-box");
+  recipientBox.style.display = action === "transfer" ? "block" : "none";
+};
