@@ -1,44 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <title>D.Vignesh Kumar | MERN Stack Developer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #2980b9;
+    }
+
+    .main-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      width: 300px;
+      height: 300px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .box h3 {
+      margin: 0 0 15px;
+      color: #34495e;
+    }
+
+    .scrollable-content {
+      overflow-y: auto;
+      flex-grow: 1;
+      padding-right: 10px;
+      text-align: left;
+    }
+
+    ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #2980b9;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #1abc9c;
+    }
+
+    /* Scrollbar styling */
+    .scrollable-content::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .scrollable-content::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 <body>
-    <h1>D.Vignesh Kumar</h1>
-    <h2>Mern Stack Developer</h2>
-    <h3>My Project</h3>
-    <ol>
-        <li><a href="p1">My Portfolio</a></li>
-        <li><a href="http://localhost:5173/">react-lessons</a></li>
-    </ol>
-    <hr>
-    <h3>My Assignment</h3>
-    <ol>
-        <li><a href="a1">Assignment 1</a></li>
-        <li><a href="a2">Assignment 2</a></li>
-        <li><a href="a3">Assignment 3</a></li>
-        <li><a href="a4">Assignment 4</a></li>
-        <li><a href="a5">Assignment 5</a></li>
-        <li><a href="a6">Assignment 6</a></li>
-        <li><a href="a7">Assignment 7</a></li>
-        <li><a href="a8">Assignment 8</a></li>
-        <li><a href="a9">Assignment 9</a></li>
-        <li><a href="a10">Assignment 10</a></li>
-        <li><a href="a11">Assignment 11</a></li>
-        <li><a href="a12">Assignment 12</a></li>
-        <li><a href="a13">Assignment 13</a></li>
-        <li><a href="a14">Assignment 14</a></li>
-        <li><a href="a15">Assignment 15</a></li>
-        <li><a href="a16">Assignment 16</a></li>
-        <li><a href="a17">Assignment 17</a></li>
-        <li><a href="a18">Assignment 18</a></li>
-        <li><a href="a19">Assignment 19</a></li>
-        <li><a href="a20">Assignment 20</a></li>
-        <li><a href="a21">Assignment 21</a></li>
-        <li><a href="a22">Assignment 22</a></li>
-        <li><a href="a23">Assignment 23</a></li>
-    </ol>
+
+  <h1>D.Vignesh Kumar</h1>
+  <h2>MERN Stack Developer</h2>
+
+  <div class="main-container">
+    <div class="box">
+      <h3>My Project</h3>
+      <div class="scrollable-content">
+        <ol>
+          <li><a href="#">My Portfolio</a></li>
+          <li><a href="#">react-lessons</a></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="box">
+      <h3>My Assignment</h3>
+      <div class="scrollable-content">
+        <ol>
+          <!-- Repeat for all assignments -->
+          <li><a href="a1">Assignment 1</a></li>
+          <li><a href="a2">Assignment 2</a></li>
+          <li><a href="a3">Assignment 3</a></li>
+          <li><a href="a4">Assignment 4</a></li>
+          <li><a href="a5">Assignment 5</a></li>
+          <li><a href="a6">Assignment 6</a></li>
+          <li><a href="a7">Assignment 7</a></li>
+          <li><a href="a8">Assignment 8</a></li>
+          <li><a href="a9">Assignment 9</a></li>
+          <li><a href="a10">Assignment 10</a></li>
+          <li><a href="a11">Assignment 11</a></li>
+          <li><a href="a12">Assignment 12</a></li>
+          <li><a href="a13">Assignment 13</a></li>
+          <li><a href="a14">Assignment 14</a></li>
+          <li><a href="a15">Assignment 15</a></li>
+          <li><a href="a16">Assignment 16</a></li>
+          <li><a href="a17">Assignment 17</a></li>
+          <li><a href="a18">Assignment 18</a></li>
+          <li><a href="a19">Assignment 19</a></li>
+          <li><a href="a20">Assignment 20</a></li>
+          <li><a href="a21">Assignment 21</a></li>
+          <li><a href="a22">Assignment 22</a></li>
+          <li><a href="a23">Assignment 23</a></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

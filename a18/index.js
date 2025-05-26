@@ -1,4 +1,3 @@
-
 const sum = (a, b) => {
   return new Promise((resolve, reject) => {
     const x = a + b;
